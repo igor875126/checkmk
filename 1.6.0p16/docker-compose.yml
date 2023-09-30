@@ -8,6 +8,8 @@ services:
       - "5000:5000"
     volumes:
       - ./sites:/omd/sites
+    tmpfs:
+      - /tmp
     environment:
       TIMEZONE: "Asia/Almaty"
       HOSTNAME: "checkmk.example.com"

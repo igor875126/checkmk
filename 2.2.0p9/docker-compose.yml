@@ -1,7 +1,7 @@
 version: "3"
 services:
   app:
-    image: igor875126/checkmk:2.0.0p1
+    image: igor875126/checkmk:2.2.0p9
     container_name: checkmk
     restart: unless-stopped
     ports:
