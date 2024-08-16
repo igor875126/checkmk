@@ -1,0 +1,20 @@
+version: "3.8"
+
+services:
+  app:
+    image: igor875126/checkmk:2.4.0
+    container_name: checkmk
+    restart: unless-stopped
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./sites:/omd/sites
+    tmpfs:
+      - /tmp
+    environment:
+      TIMEZONE: "Asia/Almaty"
+      HOSTNAME: "checkmk.example.com"
+      MAIL_RELAY_HOST: "smtp.gmail.com"
+      MAIL_RELAY_PORT: "587"
+      MAIL_RELAY_USERNAME: "yourname@gmail.com"
+      MAIL_RELAY_PASSWORD: ""
